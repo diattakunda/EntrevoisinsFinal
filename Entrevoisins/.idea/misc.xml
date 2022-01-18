@@ -14,7 +14,7 @@
         <entry key="app/src/main/res/drawable/ic_phone_24.xml" value="0.1390625" />
         <entry key="app/src/main/res/drawable/ic_star_border_white_24dp.xml" value="0.259375" />
         <entry key="app/src/main/res/drawable/ic_star_white_24dp.xml" value="0.259375" />
-        <entry key="app/src/main/res/layout/activity_detail.xml" value="0.18" />
+        <entry key="app/src/main/res/layout/activity_detail.xml" value="0.25" />
         <entry key="app/src/main/res/layout/nested_scroll_view.xml" value="0.2546875" />
       </map>
     </option>

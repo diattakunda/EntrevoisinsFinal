@@ -11,6 +11,7 @@ public class DeleteNeighbourEvent {
      * Neighbour to delete
      */
     public Neighbour neighbour;
+    public int fragPosition;
 
     /**
      * Constructor.
@@ -18,5 +19,7 @@ public class DeleteNeighbourEvent {
      */
     public DeleteNeighbourEvent(Neighbour neighbour) {
         this.neighbour = neighbour;
+        this.fragPosition = fragPosition;
     }
+
 }

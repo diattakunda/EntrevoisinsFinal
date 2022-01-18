@@ -32,7 +32,7 @@
             android:layout_gravity="center_horizontal">
 
         <TextView
-            android:id="@+id/caroline_img"
+            android:id="@+id/text_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Caroline"
@@ -43,7 +43,7 @@
             />
 
         <TextView
-            android:id="@+id/adress"
+            android:id="@+id/text_adress"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Adress"
@@ -54,7 +54,7 @@
             android:layout_marginTop="10dp"/>
 
         <TextView
-            android:id="@+id/phone"
+            android:id="@+id/text_phone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Phone"
@@ -65,7 +65,7 @@
             android:layout_marginTop="10dp"/>
 
             <TextView
-                android:id="@+id/site"
+                android:id="@+id/text_site"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="site"
@@ -95,6 +95,7 @@
 
 
             <TextView
+                android:id="@+id/text_about"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="A propos de moi"
@@ -104,6 +105,7 @@
                 android:layout_marginStart="15dp"/>
 
             <TextView
+                android:id="@+id/text_blabla"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="blabla"
