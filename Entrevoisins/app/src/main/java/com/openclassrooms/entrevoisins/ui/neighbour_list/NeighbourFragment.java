@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 
 import com.openclassrooms.entrevoisins.R;
 import com.openclassrooms.entrevoisins.di.DI;
+import com.openclassrooms.entrevoisins.events.ActivityDetail;
 import com.openclassrooms.entrevoisins.events.ClickNeighbourEvent;
 import com.openclassrooms.entrevoisins.events.DeleteNeighbourEvent;
 import com.openclassrooms.entrevoisins.model.Neighbour;
@@ -21,6 +22,7 @@ import com.openclassrooms.entrevoisins.service.NeighbourApiService;
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 
+import java.io.Serializable;
 import java.util.List;
 
 
@@ -104,7 +106,7 @@ public class NeighbourFragment extends Fragment {
     @Subscribe
     public void onClickNeighbourEvent(ClickNeighbourEvent event) {
         Intent intent = new Intent(getActivity(), ActivityDetail.class);
-        intent.putExtra("Neighbour", event.neighbour);
+        intent.putExtra("Neighbour", (Serializable) event.neighbour);
         intent.putExtra("Position", event.position);
         startActivity(intent);
     }

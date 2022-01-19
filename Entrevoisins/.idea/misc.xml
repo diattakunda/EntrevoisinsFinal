@@ -8,8 +8,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/arrow_back_24.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_baseline_language_24.xml" value="0.1390625" />
         <entry key="app/src/main/res/drawable/ic_baseline_location_on_24.xml" value="0.1390625" />
+        <entry key="app/src/main/res/drawable/ic_baseline_star_24.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_person_add_white_24dp.xml" value="0.259375" />
         <entry key="app/src/main/res/drawable/ic_phone_24.xml" value="0.1390625" />
         <entry key="app/src/main/res/drawable/ic_star_border_white_24dp.xml" value="0.259375" />
