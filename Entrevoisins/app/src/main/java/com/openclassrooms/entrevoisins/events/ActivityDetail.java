@@ -30,7 +30,6 @@ public class ActivityDetail extends AppCompatActivity {
     private TextView mTextSite;
     private TextView mTextAbout;
     private TextView mTextBlabla;
-    private int position;
     private Neighbour neighbourName;
     private Neighbour favoriteNeighbour;
     private NeighbourApiService mApiService;
@@ -48,7 +47,6 @@ public class ActivityDetail extends AppCompatActivity {
         mApiService = DI.getNeighbourApiService();
 
         neighbourName = (Neighbour) getIntent().getSerializableExtra("Neighbour");
-        position = getIntent().getIntExtra("Position", 0);
 
 
         mImageAvatar = (ImageView) findViewById(R.id.image_avatar);
@@ -115,12 +113,8 @@ public class ActivityDetail extends AppCompatActivity {
     }
 
     public void ButtonReturn (View view) {
-        Intent intent = new Intent(ActivityDetail.this, ListNeighbourActivity.class);
+        Intent intent = new Intent(this, ListNeighbourActivity.class);
         startActivity(intent);
 
     }
-
-
-
-
 }

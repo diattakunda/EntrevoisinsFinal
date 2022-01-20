@@ -101,4 +101,17 @@ public class Neighbour {
     public int hashCode() {
         return Objects.hash(id);
     }
+    @Override
+    public String toString() {
+        return "Neighbour{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", avatarUrl='" + avatarUrl + '\'' +
+                ", address='" + address + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", aboutMe='" + aboutMe + '\'' +
+                '}';
+
+
+    }
 }
