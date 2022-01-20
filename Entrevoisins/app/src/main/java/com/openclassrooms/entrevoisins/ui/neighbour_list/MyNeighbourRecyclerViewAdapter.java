@@ -1,7 +1,6 @@
 package com.openclassrooms.entrevoisins.ui.neighbour_list;
 
 import android.annotation.SuppressLint;
-import android.support.v7.view.menu.MenuView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -30,7 +29,7 @@ public class MyNeighbourRecyclerViewAdapter extends RecyclerView.Adapter<MyNeigh
     private final List<Neighbour> mNeighbours;
     public int fragPosition;
 
-    public MyNeighbourRecyclerViewAdapter(List<Neighbour> items) {
+    public MyNeighbourRecyclerViewAdapter(List<Neighbour> items, int i) {
         mNeighbours = items;
         this.fragPosition = fragPosition;
     }

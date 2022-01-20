@@ -4,6 +4,8 @@ import com.openclassrooms.entrevoisins.model.Neighbour;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 public abstract class DummyNeighbourGenerator {
@@ -37,5 +39,10 @@ public abstract class DummyNeighbourGenerator {
 
     static List<Neighbour> generateNeighbours() {
         return new ArrayList<>(DUMMY_NEIGHBOURS);
+    }
+    public static List<Neighbour> FAVORITE_NEIGHBOURS = Collections.emptyList();
+
+    static List<Neighbour> generateFavoritesNeighbours(){
+        return new ArrayList<>(FAVORITE_NEIGHBOURS);
     }
 }
