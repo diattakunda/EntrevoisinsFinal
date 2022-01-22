@@ -23,7 +23,7 @@ public class ActivityDetail extends AppCompatActivity {
     private ImageView mImageAvatar;
     private TextView mTextImage;
     private ImageButton mButtonReturn;
-    private FloatingActionButton mFab;
+    private ImageButton mFab;
     private TextView mTextName;
     private TextView mTextAdress;
     private TextView mTextPhone;
@@ -52,7 +52,7 @@ public class ActivityDetail extends AppCompatActivity {
         mImageAvatar = (ImageView) findViewById(R.id.image_avatar);
         mTextImage = (TextView) findViewById(R.id.text_image);
         mButtonReturn = (ImageButton) findViewById(R.id.button_return);
-        mFab = (FloatingActionButton)  findViewById(R.id.fab);
+        mFab = (ImageButton)  findViewById(R.id.fab);
         mTextName = (TextView) findViewById(R.id.text_name);
         mTextAdress = (TextView) findViewById(R.id.text_adress);
         mTextPhone = (TextView) findViewById(R.id.text_phone);

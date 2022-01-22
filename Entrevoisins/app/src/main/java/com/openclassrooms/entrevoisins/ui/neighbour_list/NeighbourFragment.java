@@ -104,11 +104,5 @@ public class NeighbourFragment extends Fragment {
         }
     }
 
-    @Subscribe
-    public void onClickNeighbourEvent(ClickNeighbourEvent event) {
-        Log.i("neighbour", "start activity detail");
-        Intent intent = new Intent(getActivity(), ActivityDetail.class);
-        intent.putExtra("Neighbour", event.neighbour.getId());
-        startActivity(intent);
-    }
+
 }

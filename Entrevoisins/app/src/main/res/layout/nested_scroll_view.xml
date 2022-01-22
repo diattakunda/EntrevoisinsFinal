@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:showIn="@layout/activity_detail"
-    tools:context=".ui.neighbour_list.ActivityDetail"
+    tools:context=".ui.neighbour_list.ListNeighbourActivity"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     android:layout_width="match_parent"
     android:layout_height="match_parent">

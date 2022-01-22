@@ -17,7 +17,7 @@ public class DeleteNeighbourEvent {
      * Constructor.
      * @param neighbour
      */
-    public DeleteNeighbourEvent(Neighbour neighbour) {
+    public DeleteNeighbourEvent(Neighbour neighbour, int fragPosition) {
         this.neighbour = neighbour;
         this.fragPosition = fragPosition;
     }

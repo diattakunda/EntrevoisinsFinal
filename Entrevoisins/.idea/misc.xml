@@ -16,12 +16,19 @@
         <entry key="app/src/main/res/drawable/ic_phone_24.xml" value="0.1390625" />
         <entry key="app/src/main/res/drawable/ic_star_border_white_24dp.xml" value="0.259375" />
         <entry key="app/src/main/res/drawable/ic_star_white_24dp.xml" value="0.259375" />
+        <entry key="app/src/main/res/layout/activity_add_neighbour.xml" value="0.2953125" />
         <entry key="app/src/main/res/layout/activity_detail.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_list_neighbour.xml" value="0.2953125" />
         <entry key="app/src/main/res/layout/fragment_list_neighbour.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_neighbour_list.xml" value="0.25" />
         <entry key="app/src/main/res/layout/nested_scroll_view.xml" value="0.2546875" />
       </map>
     </option>
+  </component>
+  <component name="EntryPointsManager">
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="org.greenrobot.eventbus.Subscribe" />
+    </list>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
