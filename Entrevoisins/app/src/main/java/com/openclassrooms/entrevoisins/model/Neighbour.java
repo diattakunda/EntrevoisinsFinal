@@ -26,6 +26,8 @@ public class Neighbour  implements Serializable {
     /** About me */
     private String aboutMe;
 
+    private boolean favoris;
+
     /**
      * Constructor
      * @param id
@@ -115,4 +117,14 @@ public class Neighbour  implements Serializable {
 
 
     }
+
+    public boolean isFavoris() {
+        return favoris;
+    }
+
+    public void setFavoris(boolean favoris) {
+        this.favoris = favoris;
+    }
+
 }
+

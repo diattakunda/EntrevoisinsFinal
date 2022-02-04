@@ -100,6 +100,7 @@ public class ActivityDetail extends AppCompatActivity {
 
     public void linkProfile() {
         // permet d'associer le layout avec les informations de la classe "model"
+        //favoriteNeighbour = mApiService.getFavoritesNeighbours(favoriteNeighbour);
         Glide.with(this).load(neighbourName.getAvatarUrl()).into(mImageAvatar);
         mTextImage.setText(neighbourName.getName());
         mTextName.setText(neighbourName.getName());
@@ -114,6 +115,7 @@ public class ActivityDetail extends AppCompatActivity {
     public void ButtonReturn (View view) {
         Intent intent = new Intent(this, ListNeighbourActivity.class);
         startActivity(intent);
+
 
     }
 }
