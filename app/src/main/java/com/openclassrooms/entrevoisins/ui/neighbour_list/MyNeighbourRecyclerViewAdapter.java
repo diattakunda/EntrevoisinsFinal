@@ -30,8 +30,8 @@ public class MyNeighbourRecyclerViewAdapter extends RecyclerView.Adapter<MyNeigh
     private final List<Neighbour> mNeighbours;
     public int fragPosition;
 
-    public MyNeighbourRecyclerViewAdapter(List<Neighbour> items, int i) {
-        mNeighbours = items;
+    public MyNeighbourRecyclerViewAdapter(List<Neighbour> mNeighbours, int i) {
+        this.mNeighbours = mNeighbours ;
         this.fragPosition = i;
     }
 
@@ -46,16 +46,13 @@ public class MyNeighbourRecyclerViewAdapter extends RecyclerView.Adapter<MyNeigh
     public void onBindViewHolder(final ViewHolder holder, @SuppressLint("RecyclerView") int position) {
         Neighbour neighbour = mNeighbours.get(position);
         holder.mNeighbourName.setText(neighbour.getName());
-        Glide.with(holder.mNeighbourAvatar.getContext())
-                .load(neighbour.getAvatarUrl())
-                .apply(RequestOptions.circleCropTransform())
-                .into(holder.mNeighbourAvatar);
+        Glide.with(holder.mNeighbourAvatar.getContext()).load(neighbour.getAvatarUrl()).apply(RequestOptions.circleCropTransform()).into(holder.mNeighbourAvatar);
 
         holder.mDeleteButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                EventBus.getDefault().post(new DeleteNeighbourEvent(neighbour, fragPosition));
-                EventBus.getDefault().post(new DeleteFavoriteNeighbourEvent(neighbour, fragPosition));
+               EventBus.getDefault().post(new DeleteNeighbourEvent(neighbour, fragPosition));
+               EventBus.getDefault().post(new DeleteFavoriteNeighbourEvent(neighbour, fragPosition));
             }
         });
         holder.itemView.setOnClickListener(new View.OnClickListener() {

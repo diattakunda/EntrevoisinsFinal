@@ -1,8 +1,12 @@
 package com.openclassrooms.entrevoisins.events;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.Drawable;
 import android.support.design.animation.Positioning;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -23,7 +27,7 @@ public class ActivityDetail extends AppCompatActivity {
     private ImageView mImageAvatar;
     private TextView mTextImage;
     private ImageButton mButtonReturn;
-    private ImageButton mFab;
+    private FloatingActionButton mFab;
     private TextView mTextName;
     private TextView mTextAdress;
     private TextView mTextPhone;
@@ -38,71 +42,70 @@ public class ActivityDetail extends AppCompatActivity {
 
 
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
 
+        ActionBar actionBar = getSupportActionBar();
+        assert actionBar != null;
+        actionBar.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        actionBar.setDisplayHomeAsUpEnabled(true);
+        final Drawable upArrow = getResources().getDrawable(R.drawable.arrow_back_24);
+        getSupportActionBar().setHomeAsUpIndicator(upArrow);
+
         mApiService = DI.getNeighbourApiService();
+
+
+
 
         neighbourName = (Neighbour) getIntent().getSerializableExtra("Neighbour");
 
 
-
         mImageAvatar = (ImageView) findViewById(R.id.image_avatar);
         mTextImage = (TextView) findViewById(R.id.text_image);
-        mButtonReturn = (ImageButton) findViewById(R.id.button_return);
-        mFab = (ImageButton)  findViewById(R.id.fab);
+        mFab = (FloatingActionButton) findViewById(R.id.fab);
         mTextName = (TextView) findViewById(R.id.text_name);
         mTextAdress = (TextView) findViewById(R.id.text_adress);
         mTextPhone = (TextView) findViewById(R.id.text_phone);
         mTextSite = (TextView) findViewById(R.id.text_site);
         mTextAbout = (TextView) findViewById(R.id.text_about);
-        mTextBlabla  = (TextView) findViewById(R.id.text_blabla);
+        mTextBlabla = (TextView) findViewById(R.id.text_blabla);
 
 
-        if (mApiService.getFavoritesNeighbours().contains(neighbourName)){
+        if (mApiService.getFavoritesNeighbours().contains(neighbourName)) {
             mFab.setImageResource(R.drawable.ic_baseline_star_24);
-        }else{
+        } else {
             mFab.setImageResource(R.drawable.ic_star_white_24dp);
         }
 
         mFab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(!mApiService.getFavoritesNeighbours().contains(favoriteNeighbour)) {
-                    mApiService.createFavoritesNeighbours(favoriteNeighbour);
-                    mFab.setImageResource(R.drawable.ic_baseline_star_24);
-                }else{
+                Toast.makeText(ActivityDetail.this,"ajouter aux favorites", Toast.LENGTH_SHORT).show();
+                if (!mApiService.getFavoritesNeighbours().contains(neighbourName)) {
+                    mApiService.createFavoritesNeighbours(neighbourName);
+                    mFab.setImageResource(R.drawable.img);
+                } else {
                     mFab.setImageResource(R.drawable.ic_star_white_24dp);
                 }
 
             }
-            });
+
+        });
 
         //création méthodes qui récupèrent infos
         validateProfile();
         linkProfile();
 
-        mButtonReturn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                finish();
-
-            }
-        });
-
     }
     public void validateProfile() {
         //message qui affiche la récuperation du nom
-        Toast.makeText(getApplicationContext(), neighbourName.getName(), Toast.LENGTH_LONG).show();
+       Toast.makeText(getApplicationContext(), neighbourName.getName(), Toast.LENGTH_LONG).show();
     }
 
     public void linkProfile() {
         // permet d'associer le layout avec les informations de la classe "model"
-        //favoriteNeighbour = mApiService.getFavoritesNeighbours(favoriteNeighbour);
         Glide.with(this).load(neighbourName.getAvatarUrl()).into(mImageAvatar);
         mTextImage.setText(neighbourName.getName());
         mTextName.setText(neighbourName.getName());
@@ -111,13 +114,6 @@ public class ActivityDetail extends AppCompatActivity {
         mTextSite.setText(String.format("%s%s","www.facebook.com/",neighbourName.getName().toLowerCase()));
         mTextBlabla.setText(neighbourName.getAboutMe());
 
-
     }
 
-    public void ButtonReturn (View view) {
-        Intent intent = new Intent(this, ListNeighbourActivity.class);
-        startActivity(intent);
-
-
-    }
 }
