@@ -108,5 +108,8 @@ public class AddNeighbourActivity extends AppCompatActivity {
     public static void navigate(FragmentActivity activity) {
         Intent intent = new Intent(activity, AddNeighbourActivity.class);
         ActivityCompat.startActivity(activity, intent, null);
+        String toto = "salut";
+        toto.toUpperCase();
+        int tata;
     }
 }

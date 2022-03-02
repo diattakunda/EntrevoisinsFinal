@@ -61,14 +61,12 @@ public class FavoriteFragment extends Fragment {
 
     @Subscribe
     public void onDeleteFavoriteNeighbour(DeleteFavoriteNeighbourEvent event) {
-        if (event.fragPosition ==1) {
+
             mApiService.deleteFavoritesNeighbours(event.favoriteNeighbour);
-            if (mApiService.getNeighbours().contains(event.favoriteNeighbour)){
-                mApiService.deleteNeighbour(event.favoriteNeighbour);
-            }
+
             initFavList();
 
-        }
+
     }
 
     @Override

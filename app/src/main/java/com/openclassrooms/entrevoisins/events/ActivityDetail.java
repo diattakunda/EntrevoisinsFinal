@@ -76,18 +76,21 @@ public class ActivityDetail extends AppCompatActivity {
         if (mApiService.getFavoritesNeighbours().contains(neighbourName)) {
             mFab.setImageResource(R.drawable.ic_baseline_star_24);
         } else {
-            mFab.setImageResource(R.drawable.ic_star_white_24dp);
+            mFab.setImageResource(R.drawable.ic_star_border_white_24dp);
         }
 
         mFab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(ActivityDetail.this,"ajouter aux favorites", Toast.LENGTH_SHORT).show();
+
                 if (!mApiService.getFavoritesNeighbours().contains(neighbourName)) {
                     mApiService.createFavoritesNeighbours(neighbourName);
-                    mFab.setImageResource(R.drawable.img);
+                    Toast.makeText(ActivityDetail.this,"ajouter aux favorites", Toast.LENGTH_SHORT).show();
+                    mFab.setImageResource(R.drawable.ic_baseline_star_24);
                 } else {
-                    mFab.setImageResource(R.drawable.ic_star_white_24dp);
+                    mFab.setImageResource(R.drawable.ic_star_border_white_24dp);
+                    mApiService.deleteFavoritesNeighbours(neighbourName);
+                    Toast.makeText(ActivityDetail.this,"retirer des favorites", Toast.LENGTH_SHORT).show();
                 }
 
             }
@@ -104,7 +107,7 @@ public class ActivityDetail extends AppCompatActivity {
        Toast.makeText(getApplicationContext(), neighbourName.getName(), Toast.LENGTH_LONG).show();
     }
 
-    public void linkProfile() {
+    public void linkProfile(String link) {
         // permet d'associer le layout avec les informations de la classe "model"
         Glide.with(this).load(neighbourName.getAvatarUrl()).into(mImageAvatar);
         mTextImage.setText(neighbourName.getName());
@@ -116,4 +119,9 @@ public class ActivityDetail extends AppCompatActivity {
 
     }
 
+    public void neighbourTime(){
+        linkProfile("texte");
+        mTextImage.setText();
+
+    }
 }

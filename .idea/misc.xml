@@ -6,6 +6,7 @@
         <entry key="../../../../../layout/custom_preview.xml" value="0.125" />
         <entry key="../entrevoisins/app/src/main/res/drawable/arrow_back_24.xml" value="0.18611111111111112" />
         <entry key="../entrevoisins/app/src/main/res/drawable/ic_baseline_star_24.xml" value="0.24010416666666667" />
+        <entry key="../entrevoisins/app/src/main/res/drawable/ic_star_border_white_24dp.xml" value="0.14114583333333333" />
         <entry key="../entrevoisins/app/src/main/res/layout/activity_detail.xml" value="0.17" />
         <entry key="../entrevoisins/app/src/main/res/layout/activity_list_neighbour.xml" value="0.33" />
         <entry key="../entrevoisins/app/src/main/res/layout/fragment_list_neighbour.xml" value="0.20833333333333334" />
