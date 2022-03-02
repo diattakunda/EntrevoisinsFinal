@@ -67,7 +67,7 @@ public class NeighboursListTest {
         onView(withId(R.id.list_neighbours))
                 .perform(RecyclerViewActions.actionOnItemAtPosition(1, click));
         // the second activity is launched
-        onView(withId(R.id.activity_detail)).check(matches(isDisplayed()));
+        onView(withId(R.id.activityDetail)).check(matches(isDisplayed()));
     }
 
     // TextView indicate the name on the new screen
@@ -76,7 +76,7 @@ public class NeighboursListTest {
         onView(withId(R.id.list_neighbours))
                 .perform(RecyclerViewActions.actionOnItemAtPosition(0, click()));
         //neighbourActivityDetail is launched
-        onView(withId(R.id.activity_detail));
+        onView(withId(R.id.activityDetail));
         // TextView is correct
         onView(withId(R.id.text_image)).check(matches(withText("Caroline")));
     }
@@ -106,7 +106,8 @@ public class NeighboursListTest {
         // Go back on neighbour list
         Espresso.pressBack();
         // Neighbour should appear in the list of favorites neighbours
-        onView(withId(R.id.list_FavoriteNeighbours)).check(withItemCount(1));
+        onView(withId(R.id.list_neighbours)).check(withItemCount(1));
+
 
     }
 }
