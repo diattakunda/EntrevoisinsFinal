@@ -107,7 +107,7 @@ public class ActivityDetail extends AppCompatActivity {
        Toast.makeText(getApplicationContext(), neighbourName.getName(), Toast.LENGTH_LONG).show();
     }
 
-    public void linkProfile(String link) {
+    public void linkProfile() {
         // permet d'associer le layout avec les informations de la classe "model"
         Glide.with(this).load(neighbourName.getAvatarUrl()).into(mImageAvatar);
         mTextImage.setText(neighbourName.getName());
@@ -119,9 +119,6 @@ public class ActivityDetail extends AppCompatActivity {
 
     }
 
-    public void neighbourTime(){
-        linkProfile("texte");
-        mTextImage.setText();
 
     }
-}
+

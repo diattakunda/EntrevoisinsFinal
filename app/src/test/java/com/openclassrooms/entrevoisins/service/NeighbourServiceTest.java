@@ -46,7 +46,7 @@ public class NeighbourServiceTest {
 // four methods added : getNeighbourByPosition, getNeighbourFavorites,addNeighboursFavorites,deleteNeighboursFavorites
 
     @Test
-    public void getNeighbourbyPosition() {
+    public void getNeighbourByPosition() {
         int position = 0;
         Neighbour expectedNeighbour = service.getPositionNeighbour(position);
         Neighbour neighbour = service.getNeighbours().get(position);
@@ -60,7 +60,7 @@ public class NeighbourServiceTest {
     }
 
     @Test
-    public void addNeighboursFavoritesWithSucess() {
+    public void addNeighboursFavoritesWithSuccess() {
         int position = 10;
         Neighbour neighbour = service.getNeighbours().get(position);
         service.createFavoritesNeighbours(neighbour);
