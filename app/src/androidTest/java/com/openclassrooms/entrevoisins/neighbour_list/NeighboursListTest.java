@@ -115,5 +115,6 @@ public class NeighboursListTest {
         onView(Matchers.allOf(ViewMatchers.isDisplayed(),withId(R.id.list_neighbours))).check(withItemCount(1));
 
 
+
     }
 }
